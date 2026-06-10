@@ -20,7 +20,6 @@ body {
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   font-family:'Nunito',sans-serif;
   padding:20px;
-  overflow-x:hidden;
 }
 
 .petal {
@@ -44,6 +43,7 @@ body {
   width:100%;height:100%;
   position:relative;
   transform-style:preserve-3d;
+  -webkit-transform-style:preserve-3d;
   transition:transform 1s cubic-bezier(.4,0,.2,1);
 }
 .card-flip.flipped { transform:rotateY(180deg); }
@@ -62,7 +62,7 @@ body {
   border:2px solid #fde68a;
   display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
   padding-bottom:24px;
-  overflow:hidden;
+  clip-path: inset(0 round 30px);
 }
 
 /* BACK */
@@ -74,7 +74,7 @@ body {
   transform:rotateY(180deg);
   display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
   padding:20px 22px 16px;
-  overflow:hidden;
+  clip-path: inset(0 round 30px);
 }
 .back-cat-top {
   width:110px;
